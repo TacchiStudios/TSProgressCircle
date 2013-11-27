@@ -9,16 +9,33 @@
 
 @interface TSProgressCircle : UIView;
 
-@property (nonatomic) float progress;
-@property (nonatomic, strong) UIImageView *medalImage;
+- (void)setProgress:(float)progress animatedWithDuration:(NSTimeInterval)duration; // Seconds to animate for any progress value
+- (void)setProgress:(float)progress animatedWithRate:(NSTimeInterval)rate; // Seconds to animate to 100%. i.e. rate * progress
 
-- (void)setProgress:(float)progress animatedWithDuration:(NSTimeInterval)duration;
-- (void)setProgress:(float)progress animatedWithDuration:(NSTimeInterval)duration animateMedal:(BOOL)animateMedal;
+@property (nonatomic) float progress;
+
+@property (nonatomic, strong) UIImage *completionImage;
+@property BOOL animatesCompletionImage;
+
+@property (nonatomic, strong) UIColor *progressColor;
+@property (nonatomic, strong) UIColor *progressBackgroundColor; // TrackColor?
+
+@property (nonatomic) float trackWidth;
+@property (nonatomic) float trackPadding;
 
 @end
+
 
 @interface TSRoundProgressLayer : CALayer
 
 @property (nonatomic) float progress;
+
+@property (nonatomic, strong) UIColor *progressColor;
+@property (nonatomic, strong) UIColor *progressBackgroundColor;
+
+@property (nonatomic) float trackWidth;
+@property (nonatomic) float trackPadding;
+
+@property BOOL shouldHideTrackOn100Percent;
 
 @end
