@@ -6,6 +6,7 @@
 //
 
 #import "TSProgressCircle.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface TSProgressCircle ()
 
