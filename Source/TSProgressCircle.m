@@ -49,11 +49,21 @@
 
 - (void)setup
 {
-	self.progressColor = [UIColor blueColor];
-	self.progressBackgroundColor = [UIColor grayColor];
+	if (!self.progressColor) {
+		self.progressColor = [UIColor blueColor];
+	}
 	
-	self.trackWidth = 20.0;
-	self.trackPadding = 0.0;
+	if (!self.progressBackgroundColor) {
+		self.progressBackgroundColor = [UIColor grayColor];
+	}
+	
+	if (!self.trackWidth) {
+		self.trackWidth = 20.0;
+	}
+	
+	if (!self.trackPadding) {
+		self.trackPadding = 0.0;
+	}
 }
 
 
