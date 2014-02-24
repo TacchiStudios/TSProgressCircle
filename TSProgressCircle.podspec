@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
     'Mark McFarlane' => 'mark@tacchistudios.com'
   }
   s.source = {
-    :git => 'https://github.com/TacchiStudios/TSProgressCircle.git',
+    :git => 'git://github.com/TacchiStudios/TSProgressCircle.git',
     :tag => '0.1.2'
   }
   s.source_files = 'Source/*.{h,m}'
