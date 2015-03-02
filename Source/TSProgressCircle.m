@@ -84,6 +84,7 @@
 		if (!self.completionImageView){
 			self.completionImageView = [[UIImageView alloc] initWithFrame:CGRectInset(self.bounds, 20, 20)];
 			[self.completionImageView setAlpha:0];
+			[self.completionImageView setContentMode:UIViewContentModeScaleAspectFit];
 			[self addSubview:self.completionImageView];
 		}
 		
